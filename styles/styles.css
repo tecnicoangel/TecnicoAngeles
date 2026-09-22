@@ -12,6 +12,15 @@ body {
     margin: 0;
 }
 
+nav.navbar.bg-dark {
+    background-color: #87CEEB !important;
+}
+
+nav.navbar.bg-dark .navbar-brand,
+nav.navbar.bg-dark .nav-link {
+    color: #000000 !important;
+}
+
 .page-shell {
     background: rgba(255, 255, 255, 0.94);
     border-radius: 1.25rem;
