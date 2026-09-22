@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - TécnicoAngeles</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/fornequi.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#212529">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <img src="imgA/Logo.png" alt="logo" width="90">
+                <a class="navbar-brand fw-bold" href="index.html">TecnicoAngel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Manual de Convivencia.html">Manual de
+                                Convivencia</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="Servicio.html">Servicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Producto.html">Producto</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contactos.html">Contactos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Cableado Estructurado RED.html">Cableado
+                                Estructurado RED</a></li>
+                        <li class="nav-item"><a class="nav-link active"
+                                href="Formulario para el cliente realice su pago .html">Formulario de Pago</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid py-4 flex-grow-1" style="min-height: 80vh;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body px-4 py-4">
+                        <h1 class="card-title text-center mb-3">Pago por Nequi</h1>
+                        <p class="text-center mb-4">Escanea el código QR con Nequi y completa el formulario para enviar
+                            tus datos por WhatsApp.</p>
+                        <img src="imgA/numeroQR..png" alt="3175702147" <form id="formulario" class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label" for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" class="form-control" required
+                                placeholder="Tu nombre completo">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="celular">Celular</label>
+                            <input type="tel" inputmode="tel" id="celular" class="form-control" required
+                                placeholder="3101234567">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="correo">Correo</label>
+                            <input type="email" id="correo" class="form-control" required
+                                placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="valor">Valor pagado</label>
+                            <input type="number" id="valor" class="form-control" required min="0" step="any"
+                                placeholder="00.00">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="archivo">Comprobante de pago</label>
+                            <input type="file" id="archivo" class="form-control" accept="image/*,.pdf">
+                            <div class="form-text">Adjunta el archivo si lo tienes disponible.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="mensaje">Observaciones</label>
+                            <textarea id="mensaje" class="form-control" rows="4"
+                                placeholder="Comentarios adicionales"></textarea>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary w-100">Enviar Información</button>
+                        </div>
+                        </form>
+
+                        <div class="alert alert-info mt-3 mb-0" role="alert">
+                            El comprobante debe adjuntarse manualmente en WhatsApp si no se puede enviar desde aquí.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
+        <p><strong>Nombre de la Empresa:</strong> TécnicoAngeles <br>
+            <strong>Nombre del Técnico:</strong> Ángel A.R.M <br>
+            <strong>Teléfono:</strong> 3175702147 o 3217633207 <br>
+            <strong>Atención:</strong> Tu equipo queda funcionando correctamente para el mejor rendimiento. <br>
+            <a class="text-white" href="docs/Manual_de_Convivencia_TecnicoAngeles_Completo.pdf" download>Descargar el
+                Manual de Convivencia en PDF</a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var nombre = document.getElementById('nombre').value.trim();
+            var celular = document.getElementById('celular').value.trim();
+            var correo = document.getElementById('correo').value.trim();
+            var valor = document.getElementById('valor').value.trim();
+            var mensaje = document.getElementById('mensaje').value.trim();
+
+            var texto = 'Hola TecnicoAngeles.%0A%0A' +
+                'Ya realicé el pago por Nequi.%0A%0A' +
+                'Nombre: ' + encodeURIComponent(nombre) + '%0A' +
+                'Celular: ' + encodeURIComponent(celular) + '%0A' +
+                'Correo: ' + encodeURIComponent(correo) + '%0A' +
+                'Valor: $' + encodeURIComponent(valor) + '%0A' +
+                'Observaciones: ' + encodeURIComponent(mensaje) + '%0A%0A' +
+                'Ahora adjunto el comprobante.';
+
+            var url = 'https://wa.me/573175702147?text=' + texto;
+            window.open(url, '_blank');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('PWA registrada con éxito', reg))
+                    .catch(err => console.error('Error al registrar PWA', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "short_name": "TecnicoAngel",
+  "name": "TecnicoAngeles - Sistemas y Teleinformática",
+  "icons": [
+    {
+      "src": "favicon_io/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon_io/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#212529",
+  "theme_color": "#212529",
+  "display": "standalone",
+  "orientation": "portrait"
+}
